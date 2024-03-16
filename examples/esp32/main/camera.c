@@ -52,7 +52,7 @@ static const char *TAG = "Camera";
 #define CAM_PIN_HREF 26
 #define CAM_PIN_PCLK 21
 #elif defined(CONFIG_ESP32_CAM)
-#define CAM_PIN_PWDN -1
+#define CAM_PIN_PWDN 32
 #define CAM_PIN_RESET -1
 #define CAM_PIN_XCLK 0
 #define CAM_PIN_SIOD 26
