@@ -1,4 +1,4 @@
-# libpeer - Portable WebRTC Library for IoT/Embedded Device
+# libpeer fork - Portable WebRTC Library for IoT/Embedded Device
 
 ![pear-ci](https://github.com/sepfy/pear/actions/workflows/pear-ci.yml/badge.svg)
 
