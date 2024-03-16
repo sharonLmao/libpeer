@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(peer)
+project(engine-rtc)
 
 option(ENABLE_TESTS "Enable tests" OFF)
 
