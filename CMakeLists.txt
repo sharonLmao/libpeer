@@ -17,6 +17,7 @@ set(DEP_LIBS
 add_definitions("-Wunused-variable -Werror=sequence-point -Werror=pointer-sign -Werror=return-type -Werror=sizeof-pointer-memaccess -Wincompatible-pointer-types")
 
 add_subdirectory(src)
+add_subdirectory(src/platform)
 
 add_library(peer::shared ALIAS peer)
 add_library(peer::static ALIAS peer-static)

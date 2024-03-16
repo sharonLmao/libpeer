@@ -7,10 +7,10 @@
 #include "peer.h"
 
 int peer_init() {
-  if(!platform_init()) {
-    LOGE("libpeer platform init failed");
-    return -1;
-  }
+  // if(!platform_init()) {
+  //   LOGE("libpeer platform init failed");
+  //   return -1;
+  // }
 
   if(srtp_init() != srtp_err_status_ok) {
 

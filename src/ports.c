@@ -1,10 +1,19 @@
 #include <string.h>
+#include <sys/types.h>
+#include <net/if.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <netdb.h>
 #include "platform/socket.h"
 #include "platform/address.h"
 
 #ifdef ESP32
 #include <mdns.h>
 #include <esp_netif.h>
+#else
+#include <ifaddrs.h>
+#include <sys/ioctl.h>
+#include <errno.h>
 #endif
 
 #include "ports.h"
@@ -103,12 +112,12 @@ int ports_resolve_addr(const char *host, Address *addr) {
   struct addrinfo hints, *res, *p;
   int status;
   memset(&hints, 0, sizeof(hints));
-  hints.ai_family = AF_INET;
+  hints.ai_family = AF_UNSPEC;
   hints.ai_socktype = SOCK_STREAM;
 
   if ((status = getaddrinfo(host, NULL, &hints, &res)) != 0) {
-    LOGE("getaddrinfo error: `%s` => %s\n", host, gai_strerror(status));
-    //LOGE("getaddrinfo error: %d\n", status);
+    //LOGE("getaddrinfo error: %s\n", gai_strerror(status));
+    LOGE("getaddrinfo error: %d\n", status);
     return ret;
   }
 

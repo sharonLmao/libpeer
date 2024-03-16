@@ -190,9 +190,10 @@ void stun_parse_msg_buf(StunMessage *msg) {
       case STUN_ATTR_TYPE_NETWORK_COST:
         // Do nothing
         break;
-      case STUN_ATTR_TYPE_ERROR_CODE:
-        LOGE("STUN Error: %u - %.*s", (uint32_t)ntohl(*(uint32_t*)attr->value), attr->length - 4, attr->value + 4);
-        break;
+      // case STUN_ATTR_TYPE_ERROR_CODE:
+        // LOGE("STUN Error: %lu - %.*s", (unsigned int)ntohl(*(uint32_t*)attr->value), attr->length - 4, attr->value + 4);
+        // LOGE("STUN Error: %u - %.*s", (uint32_t)ntohl(*(uint32_t*)attr->value), attr->length - 4, attr->value + 4);
+        // break;
       default:
         LOGE("Unknown Attribute Type: 0x%04x", ntohs(attr->type));
         break;

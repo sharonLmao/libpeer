@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "platform/misc.h"
+#include <netinet/in.h>
 
 #include "sctp.h"
 #ifdef HAVE_USRSCTP
