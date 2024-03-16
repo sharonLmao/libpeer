@@ -1,4 +1,6 @@
-# libpeer fork - Portable WebRTC Library for IoT/Embedded Device
+# libpeer fork with ESP32-Cam Support - Portable WebRTC Library for IoT/Embedded Device
+
+Checkout the new fork example: https://github.com/sharonLmao/libpeer/tree/main/examples/esp32
 
 ![pear-ci](https://github.com/sepfy/pear/actions/workflows/pear-ci.yml/badge.svg)
 
